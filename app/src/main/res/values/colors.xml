@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appBackground">#F5F5F5</color>
+    <color name="toolbarColor">#2196F3</color> <!-- Azul -->
+    <color name="cardBackgroundColor">#FFFFFF</color> <!-- Fundo do calendário, se desejar -->
+    <color name="calendarBackground">#E3F2FD</color>  <!-- Fundo dos cards, se desejar -->
+    <color name="blue_500">#2196F3</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+
+    <!-- AppBarLayout com Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbarColor"
+            app:title="Faturamento"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Conteúdo rolável -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="16dp"
+        android:layout_marginTop="?attr/actionBarSize">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <!-- Cabeçalho com imagem (500dp x 250dp) -->
+            <ImageView
+                android:id="@+id/imageFaturamento"
+                android:layout_width="500dp"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_img_faturamento"
+                android:contentDescription="@string/app_name"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Filtro: Container centralizado com label e Spinner -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filtro:"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/filter_options" />
+            </LinearLayout>
+
+            <!-- Campo de Data para referência (o formato muda conforme o filtro) -->
+            <EditText
+                android:id="@+id/editTextFilterDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Selecione a data"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Botão para gerar relatório -->
+            <Button
+                android:id="@+id/buttonAplicarFiltro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GERAR RELATÓRIO"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Exibição do faturamento total -->
+            <TextView
+                android:id="@+id/textViewFaturamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faturamento: R$ 0.00"
+                android:textSize="24sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Exibição da área mais usada -->
+            <TextView
+                android:id="@+id/textViewAreaMaisUsada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Área mais usada: -"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

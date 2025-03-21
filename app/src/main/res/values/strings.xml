@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agendai</string>
+    <string name="titulo_do_evento">Título do Evento</string>
+    <string name="contato">Contato</string>
+    <string name="data_ex">Data (dd/MM/aaaa)</string>
+    <string name="hora_inicio">Hora de Início</string>
+    <string name="hora_termino">Hora de Término</string>
+    <string name="limpar">LIMPAR</string>
+    <string name="salvar">SALVAR</string>
+    <string name="nenhum_agendamento">Nenhum agendamento para o dia selecionado</string>
+    <string name="novo_agendamento">Novo Agendamento</string>
+
+    <string-array name="local_options">
+        <item>Campo Sintético 1</item>
+        <item>Campo Sintético 2</item>
+        <item>Quadra de Futsal</item>
+        <item>Quadra de Vôlei de Areia</item>
+    </string-array>
+
+    <string-array name="horario_options">
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+        <item>00:00</item>
+
+    </string-array>
+
+    <string-array name="filter_options">
+        <item>Dia</item>
+        <item>Mês</item>
+    </string-array>
+
+    <string name="open_drawer">Abrir Menu</string>
+    <string name="close_drawer">Fechar Menu</string>
+    <string name="horarios_livres" />
+    <string name="editar_espaco">Editar Espaço</string>
+    <string name="excluir_espaco">Excluir Espaço</string>
+    <string name="editar_evento">EDITAR EVENTO</string>
+    <string name="excluir_evento">EXCLUIR EVENTO</string>
+
+</resources>

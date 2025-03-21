@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+
+    <!-- AppBar com Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbarColor"
+            app:title="Configuração de Espaços"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Conteúdo rolável -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="16dp"
+        android:layout_marginTop="?attr/actionBarSize">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Formulário para adicionar novo espaço -->
+            <EditText
+                android:id="@+id/editTextNomeEspaco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Espaço"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextValorHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Valor por Hora"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/buttonSalvarEspaco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salvar Espaço"
+                android:layout_marginTop="8dp" />
+
+            <!-- RecyclerView para lista de espaços -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerEspacos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
